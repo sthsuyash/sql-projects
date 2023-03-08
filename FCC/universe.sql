@@ -101,3 +101,14 @@ VALUES
 ('Sombrero Galaxy', 'Also known as Messier 104', 800, 10, 28, 'Elliptical'),
 ('Large Magellanic Cloud Galaxy', 'Dwarf irregular shaped galaxy', 10, 13, 0.16, 'Irregular'),
 
+-- stars 
+
+INSERT INTO star (name, description, no_of_planets, age_in_billions_of_years, distance_from_earth_in_light_years, galaxy_id)
+VALUES
+('Sun', 'G-type main-sequence star.', 8, 4.6, NULL, 1),
+('Proxima Centauri', 'Red dwarf star that is part of the Alpha Centauri system', 1, 4.85, 4.24, 1),
+('Sirius', 'Binary star system consisting of a main-sequence star, Sirius A, and a white dwarf, Sirius B. It is located in the Canis Major constellation', NULL, 4.6, 8.6, 1),
+('Kepler-90', 'F-type main-sequence star located in the Kepler-90 system, which is located in the Cygnus constellation.', 8, 2.7, 2545, 1)
+('TRAPPIST-1', 'Ultra-cool red dwarf star located in the Aquarius constellation.', 7, 7.6, 39, 1),
+('Tau Ceti', 'G-type main-sequence star located in the Cetus constellation.',4, 7.6, 11.9, 1);
+
