@@ -129,3 +129,26 @@ VALUES
 ('Gliese 581d', 'Gliese 581d is an exoplanet located in the habitable zone of the Gliese 581 star', TRUE, NULL, NULL, 20.5, NULL),
 ('Kepler-186f', 'Kepler-186f is an exoplanet located in the habitable zone of the Kepler-186 star.', TRUE, NULL, NULL, 500, NULL);
 
+-- The moon table should have at least 20 rows
+INSERT INTO moon(name, description, age_in_billions_of_years, distance_from_earth, planet_id)
+VALUES
+('Moon', 'The Moon is the only natural satellite of Earth and the fifth largest moon in the Solar System.', 4.5, NULL, 1),
+('Phobos', 'Phobos is the larger of the two natural satellites of Mars and is the only moon in the Solar System known to be captured by a planet.', 4.6, 9.4, 4),
+('Deimos', 'Deimos is the smaller of the two natural satellites of Mars and is the only moon in the Solar System known to be captured by a planet.', 4.6, 23.4, 4),
+('Io', 'Io is the innermost of the four Galilean moons of Jupiter and is the third largest moon in the Solar System.', 4.5, 421.8, 5),
+('Europa', 'Europa is the second innermost of the four Galilean moons of Jupiter and is the sixth largest moon in the Solar System.', 4.5, 671.1, 5),
+('Ganymede', 'Ganymede is the third innermost of the four Galilean moons of Jupiter and is the largest moon in the Solar System.', 4.5, 1070.4, 5),
+('Callisto', 'Callisto is the outermost of the four Galilean moons of Jupiter and is the second largest moon in the Solar System.', 4.5, 1882.7, 5),
+('Mimas', 'Mimas is the innermost of the four Galilean moons of Saturn and is the smallest moon in the Solar System.', 4.5, 185539, 6),
+('Enceladus', 'Enceladus is the second innermost of the four Galilean moons of Saturn and is the sixth largest moon in the Solar System.', 4.5, 237948, 6),
+('Tethys', 'Tethys is the third innermost of the four Galilean moons of Saturn and is the seventh largest moon in the Solar System.', 4.5, 294619, 6),
+('Dione', 'Dione is the fourth innermost of the four Galilean moons of Saturn and is the eighth largest moon in the Solar System.', 4.5, 377396, 6),
+('Rhea', 'Rhea is the fifth innermost of the four Galilean moons of Saturn and is the ninth largest moon in the Solar System.', 4.5, 527108, 6),
+('Titan', 'Titan is the largest moon of Saturn and is the second largest moon in the Solar System.', 4.5, 1221870, 6),
+('Iapetus', 'Iapetus is the outermost of the four Galilean moons of Saturn and is the 15th largest moon in the Solar System.', 4.5, 3560820, 6),
+('Miranda', 'Miranda is the innermost of the four Galilean moons of Uranus and is the eighth largest moon in the Solar System.', 4.5, 129390, 7),
+('Ariel', 'Ariel is the second innermost of the four Galilean moons of Uranus and is the ninth largest moon in the Solar System.', 4.5, 191020, 7),
+('Umbriel', 'Umbriel is the third innermost of the four Galilean moons of Uranus and is the tenth largest moon in the Solar System.', 4.5, 266000, 7),
+('Titania', 'Titania is the fourth innermost of the four Galilean moons of Uranus and is the 11th largest moon in the Solar System.', 4.5, 435910, 7),
+('Oberon', 'Oberon is the outermost of the four Galilean moons of Uranus and is the 12th largest moon in the Solar System.', 4.5, 583520, 7),
+('Triton', 'Triton is the largest moon of Neptune and is the 27th largest moon in the Solar System.', 4.5, 354759, 8);
