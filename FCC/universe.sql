@@ -112,3 +112,20 @@ VALUES
 ('TRAPPIST-1', 'Ultra-cool red dwarf star located in the Aquarius constellation.', 7, 7.6, 39, 1),
 ('Tau Ceti', 'G-type main-sequence star located in the Cetus constellation.',4, 7.6, 11.9, 1);
 
+-- The planet table should have at least 12 rows
+
+INSERT INTO planet (name, description, has_water, no_of_moons, age_in_billions_of_years, distance_from_earth, star_id)
+VALUES
+('Earth', 'Earth is a terrestrial planet in our solar system that contains water, as well as an atmosphere that supports life.', TRUE, 1, 4.5, NULL, 1),
+('Mercury', 'Mercury is a terrestrial planet in our solar system that has a thin atmosphere and is the closest planet to the Sun.', FALSE, 0, 4.5, NULL, 1),
+('Venus', 'Venus is a terrestrial planet in our solar system that has a thick atmosphere that traps heat, making it the hottest planet in our solar system.', TRUE, 0, 4.5, 0.7, 1),
+('Mars', 'Mars is a terrestrial planet in our solar system that is believed to have once contained water on its surface.', TRUE, 2, 4.6, 1.5, 1),
+('Jupiter', 'Jupiter is a gas giant planet in our solar system that has a large number of moons, including four large moons known as the Galilean moons.', FALSE, 79, 4.5, 5.2, 1),
+('Saturn', 'Saturn is a gas giant planet in our solar system that is known for its rings, which are made up of ice particles and rock. It has numerous moons, including the largest moon in our solar system, Titan.', FALSE, 82, 4.5, 9.5, 1),
+('Uranus', 'Uranus is a gas giant planet in our solar system that is tilted on its side, causing it to have extreme seasonal variations.', FALSE, 27, 4.5, 19.2, 1),
+('Neptune', 'Neptune is a gas giant planet in our solar system that is known for its blue coloration and high winds.', FALSE, 14, 4.5, 30.1, 1),
+('Kepler-22b', 'Kepler-22b is an exoplanet located in the habitable zone of a star.', TRUE, NULL, NULL, 600, NULL),
+('TRAPPIST-1d', 'TRAPPIST-1d is an exoplanet located in the habitable zone of the TRAPPIST-1 star.', NULL, NULL, NULL, 39, 5),
+('Gliese 581d', 'Gliese 581d is an exoplanet located in the habitable zone of the Gliese 581 star', TRUE, NULL, NULL, 20.5, NULL),
+('Kepler-186f', 'Kepler-186f is an exoplanet located in the habitable zone of the Kepler-186 star.', TRUE, NULL, NULL, 500, NULL);
+
