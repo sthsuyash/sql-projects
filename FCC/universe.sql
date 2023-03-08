@@ -91,3 +91,13 @@ CREATE TABLE comet(
 -- Each table should have at least three columns
 
 -- The galaxy and star tables should each have at least six rows
+
+INSERT INTO galaxy (name, description, no_of_stars_in_billions, age_in_billions_of_years, distance_from_earth_in_million_light_years, galaxy_types) 
+VALUES 
+('Milky Way Galaxy', 'Our galaxy', 200, 13.7, 0, 'Barred Spiral'),
+('Andromeda Galaxy', 'The nearest galaxy to the Milky Way. Also known as Messier 31', 1000, 10, 2.5, 'Spiral'),
+('Triangulum Galaxy', 'Also known as Messier 33', 50, 13, 3, 'Spiral'),
+('Whirlpool Galaxy', 'Also known as Messier 51', 100, 13, 23, 'Spiral');
+('Sombrero Galaxy', 'Also known as Messier 104', 800, 10, 28, 'Elliptical'),
+('Large Magellanic Cloud Galaxy', 'Dwarf irregular shaped galaxy', 10, 13, 0.16, 'Irregular'),
+
