@@ -152,3 +152,11 @@ VALUES
 ('Titania', 'Titania is the fourth innermost of the four Galilean moons of Uranus and is the 11th largest moon in the Solar System.', 4.5, 435910, 7),
 ('Oberon', 'Oberon is the outermost of the four Galilean moons of Uranus and is the 12th largest moon in the Solar System.', 4.5, 583520, 7),
 ('Triton', 'Triton is the largest moon of Neptune and is the 27th largest moon in the Solar System.', 4.5, 354759, 8);
+
+-- comets
+
+INSERT INTO comet (name, description, age_in_billions_of_years, star_id)
+VALUES
+('Halleys Comet', 'Halleys Comet is the most famous comet and has an orbit that brings it close to Earth roughly every 76 years. Estimated the same age as the solar system.', 4.6, 1),
+('Comet Hale-Bopp' 'Comet Hale-Bopp was one of the brightest comets ever observed and was visible to the naked eye for a record-breaking 18 months in 1996 and 1997.', 4.5, 1),
+('Comet Lovejoy', 'Comet Lovejoy was discovered in 2011 and became visible to the naked eye in 2013.', 4.5, 1)
