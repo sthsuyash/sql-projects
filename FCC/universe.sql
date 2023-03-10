@@ -1,7 +1,7 @@
 -- Building a celestial bodies database project --
 
 -- For this project, log in to PostgreSQL with psql to create the database. 
--- Do that by entering psql -U <username> --d <db-name> in the terminal. 
+-- Do that by entering psql -U <username> -d <db-name> in the terminal. 
 
 -- All the tests below must pass to complete the project.
 
