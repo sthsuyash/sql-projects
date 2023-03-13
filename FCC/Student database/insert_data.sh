@@ -2,7 +2,10 @@
 
 # Script to insert data from courses.csv and students.csv into students database
 
-PSQL="psql -X -U localhost -d students --no-align --tuples-only -c"
+PSQL="psql -X -U localhost -d students --no-align --tuples-only -c" # PSQL variable to run queries
+
+# Truncate tables at the start
+echo $($PSQL "TRUNCATE students, majors, courses, majors_courses")
 
 cat courses.csv | while IFS="," read MAJOR COURSE; 
 do
@@ -31,14 +34,23 @@ do
         fi
 
         # get course_id
-
+        COURSE_ID=$($PSQL "SELECT course_id from courses WHERE course='$COURSE'")
         # if not found
+        if [[ -z $COURSE_ID ]]
+        then
+            # insert course
+            INSERT_COURSE_RESULT=$($PSQL "INSERT INTO courses(course) VALUES('$COURSE')")
 
-        # insert course
-
-        # get new course_id
+            if [[ $INSERT_COURSE_RESULT == "INSERT 0 1" ]]
+            then
+              echo Inserted into courses, $COURSE
+            fi
+            # get new course_id
+            COURSE_ID=$($PSQL "SELECT course_id FROM courses WHERE course='$COURSE'")
+        fi
 
         # insert into majors_courses
+        INSERT_MAJORS_COURSES_RESULT=$($PSQL "INSERT INTO majors_courses(major_id, course_id) VALUES ($MAJOR_ID, $COURSE_ID)")
 
     fi
 done
