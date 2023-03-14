@@ -57,6 +57,7 @@ do
           echo Inserted into majors_courses, $MAJOR : $COURSE
         fi
     fi
+    
 done
 
 # Now, you can query your database using the PSQL variable like this: $($PSQL "<query_here>"). Below the get major_id comment in your loop, create a MAJOR_ID variable. Set it equal to the result of a query that gets the major_id of the current MAJOR in the loop. Make sure to put your MAJOR variable in single quotes.
