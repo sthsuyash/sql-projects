@@ -15,3 +15,5 @@ echo "$($PSQL "SELECT first_name, last_name, gpa FROM students WHERE gpa = 4.0")
 echo -e "\nAll course names whose first letter is before 'D' in the alphabet:"
 echo "$($PSQL "SELECT course FROM courses WHERE course < 'D'")"
 
+echo -e "\nFirst name, last name, and GPA of students whose last name begins with an 'R' or after and have a GPA greater than 3.8 or less than 2.0:" 
+echo "$($PSQL "SELECT first_name, last_name, gpa FROM students WHERE last_name >= 'R' and (gpa > 3.8 or gpa < 2.0)")"
