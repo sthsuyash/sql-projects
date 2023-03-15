@@ -67,11 +67,15 @@ do
   then
     # get major_id
     MAJOR_ID=$($PSQL "SELECT major_id FROM majors WHERE major_id='$MAJOR'")
-    # echo $MAJOR_ID # for testing
     
     # if not found
+    if [[ -z $MAJOR_ID ]] # if MAJOR_ID is empty, i.e. -z is used to check if the variable is empty
+    then
+      # set to null
+      MAJOR_ID=null
+    fi
+    # echo $MAJOR_ID # for testing
 
-    # set to null
     # insert student
   fi
 done
