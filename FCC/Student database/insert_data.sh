@@ -57,9 +57,14 @@ do
           echo Inserted into majors_courses, $MAJOR : $COURSE
         fi
     fi
-    
 done
 
-# Now, you can query your database using the PSQL variable like this: $($PSQL "<query_here>"). Below the get major_id comment in your loop, create a MAJOR_ID variable. Set it equal to the result of a query that gets the major_id of the current MAJOR in the loop. Make sure to put your MAJOR variable in single quotes.
+# now for students table
 
-# You won't want to add the first line from the CSV file to the database since those are just titles. In your script, add an if condition at the top of your loop that checks if $MAJOR != major. Put all the existing code and comments in your loop in it's statements area so it only does any of it if it's not the first line.
+cat students.csv | while IFS="," read FIRST LAST MAJOR GPA;
+do
+      if [[ $FIRST != first_name ]]
+  then
+   
+  fi
+done
