@@ -71,27 +71,23 @@ ALTER TABLE majors_courses ADD FOREIGN KEY(course_id) REFERENCES courses(course_
 ALTER TABLE majors_courses ADD PRIMARY KEY(major_id, course_id);
 
 -- Next, you can start adding some info. Since the students table needs a major_id, you can add a major first. View the details of the majors table to see what info it expects.
-\d majors
+-- \d majors
 
 
 -- It only needs the name of a major. The ID will be added automatically. Add the first major from the courses.csv file into the majors table. It's a VARCHAR, so make sure to put the value in single quotes
 INSERT INTO majors (major) VALUES ('Database Administration');
 
-
 -- Use SELECT to view all the data in the majors table to make sure it got inserted correctly.
 SELECT * FROM majors;
 
-
 -- Next, insert the first course from courses.csv into the courses table.
 INSERT INTO courses (course) VALUES ('Data Structures and Algorithms');
-
-
 
 -- View all data from courses to see if the data was inserted correctly.
 SELECT * FROM courses;
 
 -- Next, you can add a row into the junction table. View the details of it to see what it expects.
-\d majors_courses
+-- \d majors_courses
 
 
 -- It wants a major_id and course_id. Add a row to majors_courses for the first entry in courses.csv.
@@ -100,25 +96,11 @@ INSERT INTO majors_courses VALUES (1, 1);
 -- View all data
 SELECT * FROM majors_courses;
 
-
 -- Looks like the row got added. View the details of the students table to remind yourself what it expects so you can add the first student to the database.
-\d students
-
+-- \d students
 
 -- The output shows what the table needs. Insert the first person from students.csv into the students table.
 INSERT INTO students (first_name, last_name, major_id, gpa) VALUES ('Rhea', 'Kellems', 1, 2.5);
 
-
 -- Looks like it worked. View all the data in the students table to make sure.
 SELECT * FROM students;
-
-
--- Okay, you added a row into each table. It might be wise to review the data and the database structure. Adding the rest of the info one at a time would be tedious. You are going to make a script to do it for you. I recommend "splitting" the terminal for this part. You can do that by clicking the "hamburger" menu at the top left of the window, going to the "Terminal" menu, and clicking "Split Terminal". Once you've done that, use the touch command to create a file named insert_data.sh in your project folder.
-
--- You should have two terminals open. One connected to PostgreSQL, and one for entering terminal commands. In the one for terminal commands, use the chmod command with the +x flag to give you new script executable permissions.
-chmod +x insert_data.sh
-
--- First, you should add all the info from the courses.csv file since you need the major_id for inserting the student info. cat is a terminal command for printing the contents of a file. Here's an example: cat <filename>. Below the comment you added, use it to print courses.csv.
-
-
--- It helps to plan out what you want to happen. For each loop, you will want to add the major to the database if it isn't in there yet. Same for the course. Then add a row to the majors_courses table. Add these single line comments in your loop in this order: get major_id, if not found, insert major, get new major_id, get course_id, if not found, insert course, get new course_id, insert into majors_courses.
